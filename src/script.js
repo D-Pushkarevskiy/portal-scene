@@ -34,7 +34,7 @@ const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
 // Texture
-const bakedTexture = textureLoader.load('/baked.jpg')
+const bakedTexture = textureLoader.load('./baked.jpg')
 bakedTexture.flipY = false
 bakedTexture.colorSpace = THREE.SRGBColorSpace
 
@@ -54,7 +54,7 @@ const portalLightMaterial = new THREE.ShaderMaterial({
 })
 
 // Model
-gltfLoader.load('/portal.glb', (glft) => {
+gltfLoader.load('./portal.glb', (glft) => {
     glft.scene.traverse((child) => {
         switch (child.name) {
             case 'poleLightA':
