@@ -4,7 +4,7 @@ import glsl from 'vite-plugin-glsl'
 export default {
     root: 'src/',
     publicDir: '../static/',
-    base: './',
+    base: '/portal-scene/',
     server:
     {
         host: true, // Open to local network and display URL
@@ -12,13 +12,13 @@ export default {
     },
     build:
     {
-        outDir: '../dist', // Output in the dist/ folder
+        outDir: '../docs', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
         sourcemap: true // Add sourcemap
     },
     plugins:
-    [
-        restart({ restart: [ '../static/**', ] }), // Restart server on static file change
-        glsl() // Handle shader files
-    ]
+        [
+            restart({ restart: ['../static/**',] }), // Restart server on static file change
+            glsl() // Handle shader files
+        ]
 }
