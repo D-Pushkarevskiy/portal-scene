@@ -1,4 +1,4 @@
-# [AutoBoxShadow](https://d-pushkarevskiy.github.io/portal-scene/) :eyes:
+# [Portal scene](https://d-pushkarevskiy.github.io/portal-scene/) :eyes:
 
 https://d-pushkarevskiy.github.io/portal-scene/
 

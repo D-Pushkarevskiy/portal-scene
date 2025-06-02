@@ -149,7 +149,10 @@ window.addEventListener('resize', () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
     // Update fireflies
-    fireflies.uniforms.uPixelRatio.value = Math.min(window.devicePixelRatio, 2)
+    if (fireflies.uniforms && firefliesAroundHandle.uniforms) {
+        fireflies.uniforms.uPixelRatio.value = Math.min(window.devicePixelRatio, 2)
+        firefliesAroundHandle.uniforms.uPixelRatio.value = Math.min(window.devicePixelRatio, 2)
+    }
 })
 
 /**
